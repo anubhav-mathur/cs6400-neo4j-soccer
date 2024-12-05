@@ -20,16 +20,16 @@ class Neo4jConnection:
 
 # Replace these with your Neo4j credentials
 # neo4j_conn = Neo4jConnection(
-#     uri="bolt://localhost:7687",  # Default Neo4j Desktop port
-#     user="neo4j",                 # Neo4j username
-#     password=""      # Neo4j password
+#     uri="bolt://localhost:7687",
+#     user="neo4j",
+#     password=""
 # )
 
-#Neo4j Aura
+# Neo4j Aura
 neo4j_conn = Neo4jConnection(
-    uri="neo4j+s://adb4320c.databases.neo4j.io",  # Default Neo4j Desktop port
-    user="neo4j",                 # Neo4j username
-    password="oMg2ztAX08Rn5jjwt7xTEAJPZ9BtfrnMWF9J-S8XRDE"      # Neo4j password
+    uri="neo4j+s://2f4d6707.databases.neo4j.io",
+    user="neo4j",
+    password="ozkwISVE3JulnPCIvq23n0H1Bu5KEMgXQIpLXxONq3g"
 )
 
 # API endpoint to get rankings
