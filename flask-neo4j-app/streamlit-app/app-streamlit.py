@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # Backend Flask API URL
-BASE_URL = "http://127.0.0.1:5000"  # Change if Flask runs on another host/port
+BASE_URL = "https://cs6400-neo4j-soccer.onrender.com"  # Change if Flask runs on another host/port
 
 st.title("Soccer Data Viewer")
 
