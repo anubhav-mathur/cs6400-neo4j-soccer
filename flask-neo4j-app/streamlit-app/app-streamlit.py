@@ -24,9 +24,6 @@ elif tab == "Data Management":
     )
 
 
-# # Add Tabs
-# tab = st.sidebar.radio("Choose a Feature", ["Team Rankings Viewer", "Head-to-Head", "Team Trend Viewer", "Update Match", "Add Match"])
-
 if selected_feature == "Team Rankings Viewer":
     st.header("Team Rankings")
     leagues_response = requests.get(f"{BASE_URL}/leagues")

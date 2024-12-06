@@ -103,7 +103,7 @@ def get_leagues():
     leagues = neo4j_conn.query(query)
     return jsonify([{"id": league["id"], "name": league["name"]} for league in leagues])
 
-# API endpoint to get seaosns for a league
+# API endpoint to get seasons for a league
 @app.route('/seasons', methods=['GET'])
 def get_seasons():
     league_id = request.args.get('leagueID')
@@ -221,6 +221,7 @@ def team_trend():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
+# API endpoint to get stats for a match ID
 @app.route('/match_stats', methods=['GET'])
 def get_match_stats():
     match_id = request.args.get('matchID', type=int)
@@ -244,7 +245,7 @@ def get_match_stats():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-    
+# API endpoint to get all matches for a season in a league
 @app.route('/matches', methods=['GET'])
 def get_matches():
     league_id = request.args.get('leagueID')
@@ -265,6 +266,7 @@ def get_matches():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# API endpoint to update stats for a match
 @app.route('/update_match', methods=['PUT'])
 def update_match():
     data = request.json
@@ -311,7 +313,7 @@ def update_match():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-
+# API endpoint to add a new match to a season in a league
 @app.route('/add_match', methods=['PUT'])
 def add_match():
     try:
@@ -350,7 +352,7 @@ def add_match():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
+# API endpoint to delete a match from a season in a league
 @app.route('/delete_match', methods=['DELETE'])
 def delete_match():
     try:
