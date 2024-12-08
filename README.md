@@ -1,1 +1,1 @@
-# cs6400-neo4j-soccer
+# CS6400 Neo4j Soccer Project - Group 9
